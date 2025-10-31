@@ -3,8 +3,8 @@ Module : gestion_bibliotheque
 Description : Gère le chargement, la manipulation et l'affichage des bibliothèques de chansons.
 """
 
-from modules import Chanson
-from modules import utils
+import Chanson
+import utils
 
 
 class BibliothequeManager:
@@ -19,12 +19,15 @@ class BibliothequeManager:
         self.chemin = chemin_fichier
         self.bibliotheques = []
 
-    def charger_bibliotheques(self) -> None:
+
+    def charger_bibliotheques(self) -> dict:
         """
         Charge les bibliothèques à partir du fichier JSON.
         Utilise une fonction utilitaire de utils.py.
         """
-        pass
+        print(f"charger : {self.chemin}")
+        self.bibliotheques = utils.lire_json(self.chemin)
+
 
     def sauvegarder_bibliotheques(self) -> None:
         """
@@ -32,18 +35,31 @@ class BibliothequeManager:
         """
         pass
 
+
     def afficher_bibliotheques(self) -> None:
         """
         Affiche toutes les bibliothèques et leurs chansons dans la console.
         """
-        pass
+        
+        liste_bibliotheques = self.bibliotheques["bibliotheques"]
+        for b in liste_bibliotheques :
+            print()
+            print(f"======== {b["bibliotheque_nom"]} ===========")
+            print()
+            liste_chansons = b["chansons"]
+            for c in liste_chansons :
+                print(f"{c["chanson_titre"]} -- {c["chanson_chanteur"]}" )
+
+
 
     def ajouter_chanson(self, nom_bibliotheque: str, chanson: Chanson) -> None:
         """
         Ajoute une chanson à une bibliothèque donnée.
         Si la bibliothèque n'existe pas, elle peut être créée.
         """
-        pass
+
+        biblio = utils.trouver_bibliotheque(nom_bibliotheque)
+        biblio[nom_bibliotheque].append(b)
 
     def supprimer_chanson(self, nom_bibliotheque: str, chanson_id: int) -> None:
         """
@@ -70,3 +86,11 @@ class BibliothequeManager:
         ordre : "asc" ou "desc".
         """
         pass
+
+
+if __name__ == "__main__" :
+    bm = BibliothequeManager(utils.PATH_MES_DATAS)
+    print(f"self.chemin = {bm.chemin}")
+    print(f"path : {utils.PATH_MES_DATAS}")
+    bm.charger_bibliotheques()
+    bm.afficher_bibliotheques()
