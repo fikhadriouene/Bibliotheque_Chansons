@@ -6,4 +6,14 @@ class Chanson :
             self.chanson_chanteur = chanson_chanteur
             self.chanson_categorie = chanson_categorie
             self.chanson_score = chanson_score
+    
+    def chanson_to_dict(self) -> dict :
+          d = {}
+          d["chanson_id"] = self.chanson_id
+          d["chanson_titre"] = self.chanson_titre
+          d["chanson_chanteur"] = self.chanson_chanteur
+          d["chanson_categorie"] = self.chanson_categorie
+          d["chanson_score"] = self.chanson_score
+
+          return d
 

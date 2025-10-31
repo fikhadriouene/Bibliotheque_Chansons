@@ -52,13 +52,13 @@ class BibliothequeManager:
 
 
 
-    def ajouter_chanson(self, nom_bibliotheque: str, chanson: Chanson) -> None:
+    def ajouter_chanson(self, nom_bibliotheque: str, chanson: Chanson.Chanson) -> None:
         """
         Ajoute une chanson à une bibliothèque donnée.
         Si la bibliothèque n'existe pas, elle peut être créée
         """
         biblio = utils.trouver_bibliotheque(self.bibliotheques,nom_bibliotheque)
-        biblio["chansons"].append(chanson)
+        biblio["chansons"].append(chanson.chanson_to_dict())
         
         
 
@@ -91,13 +91,9 @@ class BibliothequeManager:
 
 if __name__ == "__main__" :
     bm = BibliothequeManager(utils.PATH_MES_DATAS)
-    print(f"self.chemin = {bm.chemin}")
-    print(f"path : {utils.PATH_MES_DATAS}")
     bm.charger_bibliotheques()
-    bm.afficher_bibliotheques()
-
-
     chanson = Chanson.Chanson(5,"titre1","chanteur1",1,4.2)
     bm.ajouter_chanson("Bibliothèque Pop & Rock", chanson)
     bm.afficher_bibliotheques()
+
 
