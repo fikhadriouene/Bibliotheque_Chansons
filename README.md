@@ -11,8 +11,7 @@
 
 ### GIT
 
-- Création du repository sur GitHub
-- [Repository GitHub](https://github.com/fikhadriouene/Bibliotheque_Chansons)  
+- Création du repository sur GitHub https://github.com/fikhadriouene/Bibliotheque_Chansons  
 - Push des avancées sur le repository
 
 ---
@@ -47,3 +46,12 @@
 ## Module `utils`
 - `lire_json` : lire le fichier JSON et retourne un dictionnaire contenant les données
 - `trouver_bibliotheque` : retourne une bibliothèque en fonction de son nom
+
+
+---
+
+### Jupyter
+
+- Création du fichier README.MD qui contient les avancées et notions utilisées
+
+
