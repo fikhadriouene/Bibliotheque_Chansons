@@ -1,0 +1,108 @@
+{
+    "bibliotheques": [
+        {
+            "bibliotheque_nom": "Bibliothèque Pop & Rock",
+            "chansons": [
+                {
+                    "chanson_id": 1,
+                    "chanson_titre": "Bohemian Rhapsody",
+                    "chanson_chanteur": "Queen",
+                    "chanson_categorie": "Rock",
+                    "chanson_score": 4.9
+                },
+                {
+                    "chanson_id": 2,
+                    "chanson_titre": "Billie Jean",
+                    "chanson_chanteur": "Michael Jackson",
+                    "chanson_categorie": "Pop",
+                    "chanson_score": 4.7
+                },
+                {
+                    "chanson_id": 3,
+                    "chanson_titre": "Hotel California",
+                    "chanson_chanteur": "Eagles",
+                    "chanson_categorie": "Rock",
+                    "chanson_score": 4.6
+                }
+            ]
+        },
+        {
+            "bibliotheque_nom": "Bibliothèque Jazz & Blues",
+            "chansons": [
+                {
+                    "chanson_id": 4,
+                    "chanson_titre": "What a Wonderful World",
+                    "chanson_chanteur": "Louis Armstrong",
+                    "chanson_categorie": "Jazz",
+                    "chanson_score": 4.5
+                },
+                {
+                    "chanson_id": 5,
+                    "chanson_titre": "At Last",
+                    "chanson_chanteur": "Etta James",
+                    "chanson_categorie": "Blues",
+                    "chanson_score": 4.3
+                },
+                {
+                    "chanson_id": 6,
+                    "chanson_titre": "Take Five",
+                    "chanson_chanteur": "Dave Brubeck",
+                    "chanson_categorie": "Jazz",
+                    "chanson_score": 4.4
+                }
+            ]
+        },
+        {
+            "bibliotheque_nom": "Bibliothèque Rap & Hip-Hop",
+            "chansons": [
+                {
+                    "chanson_id": 7,
+                    "chanson_titre": "Lose Yourself",
+                    "chanson_chanteur": "Eminem",
+                    "chanson_categorie": "Rap",
+                    "chanson_score": 4.8
+                },
+                {
+                    "chanson_id": 8,
+                    "chanson_titre": "Juicy",
+                    "chanson_chanteur": "The Notorious B.I.G.",
+                    "chanson_categorie": "Hip-Hop",
+                    "chanson_score": 4.5
+                },
+                {
+                    "chanson_id": 9,
+                    "chanson_titre": "HUMBLE.",
+                    "chanson_chanteur": "Kendrick Lamar",
+                    "chanson_categorie": "Rap",
+                    "chanson_score": 4.6
+                }
+            ]
+        },
+        {
+            "bibliotheque_nom": "Bibliothèque Classique",
+            "chansons": [
+                {
+                    "chanson_id": 10,
+                    "chanson_titre": "Clair de Lune",
+                    "chanson_chanteur": "Claude Debussy",
+                    "chanson_categorie": "Classique",
+                    "chanson_score": 4.9
+                },
+                {
+                    "chanson_id": 11,
+                    "chanson_titre": "Symphonie No.5",
+                    "chanson_chanteur": "Ludwig van Beethoven",
+                    "chanson_categorie": "Classique",
+                    "chanson_score": 4.8
+                },
+                {
+                    "chanson_id": 12,
+                    "chanson_titre": "Nocturne Op.9 No.2",
+                    "chanson_chanteur": "Frédéric Chopin",
+                    "chanson_categorie": "Classique",
+                    "chanson_score": 4.7
+                }
+            ]
+        }
+    ]
+}
