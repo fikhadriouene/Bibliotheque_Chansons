@@ -33,11 +33,11 @@ def trouver_bibliotheque(bibliotheques: list, nom: str) -> dict:
     Retourne la bibliothèque correspondant au nom fourni.
     Si aucune bibliothèque ne correspond, retourne None.
     """
-    for b in bibliotheques :
+    liste_bibliotheques = bibliotheques["bibliotheques"]
+    for b in liste_bibliotheques :
         if b["bibliotheque_nom"] == nom :
             return b
-        else :
-            print("bibiothèque inexistante")
+    print("bibiothèque inexistante")
 
 
 def generer_nouvel_id(bibliotheques: list) -> int:
@@ -61,9 +61,9 @@ def formater_affichage_chanson(chanson_obj) -> str:
 
 if __name__ == "__main__" :
 
-    bibiotheques  = lire_json(PATH_MES_DATAS)
-    b = bibiotheques["bibliotheques"][0]
-    #print(b["chansons"])
+    bibliotheques  = lire_json(PATH_MES_DATAS)
+    b = trouver_bibliotheque(bibliotheques,"Bibliothèque Classique")
+    print(b)
     print(generer_nouvel_id(b))
     
 
